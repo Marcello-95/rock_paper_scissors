@@ -1,9 +1,10 @@
 
+//This function makes the computer choose between 3 strings
 function computerPlay(){
     const choice = ["rock","paper","scissors"];
     return choice[Math.floor(Math.random()*choice.length)];
 }
-
+//This function evaluates the computer random choice and the user input, then prints the evaluation result
 function playRound(playerSelection,computerSelection){
 playerSelection = prompt("Choose between Rock, Paper or Scissors");
 computerSelection = computerPlay();  
@@ -31,12 +32,14 @@ else if (playerSelection.toLowerCase() == "scissors" && computerSelection == "pa
     console.log ("You win, scissors beats paper!");}
 else if(playerSelection.toLowerCase() == "scissors" && computerSelection == "scissors"){
     console.log ("Scissors vs Scissors, nobody wins");}
-else{ 
-    console.log("Your input is invalid");}
+else{
+    console.log("Your input is invalid");} //In case an invalid input is given
 }
+//Player and Computer scores variables to store
 let playerScore = 0
 let computerScore = 0
 
+//This function loops the game 5 times, no for loop, prints the score, evaluates the results and prints who is the winner, if there is one
 function game(){
     playRound();
     playRound();
@@ -56,3 +59,4 @@ function game(){
     }
     }
     game();
+//Marcello Godenzi wrote this code in June, 2021
