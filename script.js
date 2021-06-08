@@ -2,30 +2,37 @@ function computerPlay(){
     const choice = ["rock","paper","scissors"];
     return choice[Math.floor(Math.random()*choice.length)];
 }
-computerPlay()
 
 function playRound(playerSelection,computerSelection){
 playerSelection = prompt("Choose between Rock, Paper or Scissors");
 computerSelection = computerPlay();  
 if (playerSelection.toLowerCase() == "rock" && computerSelection == "rock"){
-return ("Rock vs Rock, nobody wins");}
+    console.log ("Rock vs Rock, nobody wins");}
 else if (playerSelection.toLowerCase() == "rock" && computerSelection == "paper"){
-    return ("You lose, paper beats rock!");}
-else if (playerSelection.toLowerCase() == "rock" && computerSelection == "scissors"){
-    return ("You win, rock beats scissors!");}
+    console.log ("You lose, paper beats rock!");}
+else if (playerSelection.toLowerCase() == "rock" && computerSelection == "scissors"){  
+    console.log ("You win, rock beats scissors!");}
 else if(playerSelection.toLowerCase() == "paper" && computerSelection == "paper"){
-    return ("Paper vs Paper, nobody wins");}
+    console.log ("Paper vs Paper, nobody wins");}
 else if (playerSelection.toLowerCase() == "paper" && computerSelection == "rock"){
-    return ("You win, paper beats rock!");}
+    console.log ("You win, paper beats rock!");}
 else if (playerSelection.toLowerCase() == "paper" && computerSelection == "scissors"){
-    return ("You lose, scissors beats paper!");}
+    console.log ("You lose, scissors beats paper!");}
 else if (playerSelection.toLowerCase() == "scissors" && computerSelection == "rock"){
-    return ("You lose, rock beats scissors");}
+    console.log ("You lose, rock beats scissors");}
 else if (playerSelection.toLowerCase() == "scissors" && computerSelection == "paper"){
-    return ("You win, scissors beats paper!");}
+    console.log ("You win, scissors beats paper!");}
 else if(playerSelection.toLowerCase() == "scissors" && computerSelection == "scissors"){
-    return ("Scissors vs Scissors, nobody wins");}
+    console.log ("Scissors vs Scissors, nobody wins");}
+else{ 
+    console.log("Your input is invalid");}
 }
-playRound(playerSelection,computerSelection)
 
-console.log(playRound(playerSelection, computerSelection));
+function game(){
+    playRound();
+    playRound();
+    playRound();
+    playRound();
+    playRound();
+    }
+    game();
